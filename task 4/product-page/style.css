@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; max-width: 1200px; margin: auto; padding: 20px; }
+.filters { display: flex; gap: 10px; margin-bottom: 20px; }
+select, input, button { padding: 10px; }
+.product-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.product { border: 1px solid #ddd; padding: 10px; text-align: center; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters { flex-direction: column; }
+}

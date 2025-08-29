@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Products</h1>
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Books">Books</option>
+            </select>
+            <input type="number" id="maxPrice" placeholder="Max Price">
+            <select id="sortBy">
+                <option value="">Sort By</option>
+                <option value="rating">Rating (High to Low)</option>
+                <option value="price">Price (Low to High)</option>
+            </select>
+            <button id="applyFilters">Apply</button>
+        </div>
+        <div id="productList" class="product-list"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

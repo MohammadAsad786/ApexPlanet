@@ -1,0 +1,82 @@
+/* Reset and General Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header/Nav */
+header { background: #333; color: #fff; padding: 10px; }
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+.logo { font-size: 1.5em; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: #fff; text-decoration: none; }
+.hamburger { display: none; cursor: pointer; }
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.about, .projects, .contact { text-align: center; }
+.profile-img { width: 150px; border-radius: 50%; }
+
+/* Projects Grid */
+.projects .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensure at least 300px per column */
+    gap: 20px; /* Space between grid items */
+    padding: 10px; /* Optional padding inside the grid container */
+    max-width: 100%; /* Prevent overflow beyond main */
+}
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #fff; /* Add background for contrast */
+    transition: box-shadow 0.3s; /* Smooth hover effect */
+}
+.project:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle lift effect */
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #333;
+    }
+    .nav-links.active { display: flex; }
+    .hamburger { display: block; }
+    .projects .project-list {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+    }
+}
